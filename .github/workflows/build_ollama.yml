@@ -86,10 +86,10 @@ jobs:
           load: ${{ github.event_name == 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          cache-from: |
-            user/app:cache
-            type=local,src=.
-          cache-to: type=gha,mode=max
+          #cache-from: |
+          #  user/app:cache
+          #  type=local,src=.
+          #cache-to: type=gha,mode=max
   
       # - name: Checkout code
       #   uses: actions/checkout@v2
